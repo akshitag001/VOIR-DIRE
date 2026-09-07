@@ -40,6 +40,13 @@ export default function MootSetup() {
     }
   };
 
+  const handleLoadDemo = () => {
+    setName('State v. CyberDyne Systems (2026)');
+    setProposition("On the night of October 31st, a self-driving car operated by CyberDyne software struck a pedestrian, Mr. Smith, at a crosswalk. The car's sensors detected the pedestrian but the AI categorized him as a 'floating plastic bag' due to the highly unusual, reflective Halloween costume he was wearing.\n\nCyberDyne claims the accident was unforeseeable and caused by user error (the safety driver was asleep). The State argues CyberDyne is strictly liable for the actions of its autonomous software, regardless of the safety driver's negligence.");
+    setIssues("1. Whether the manufacturer of an autonomous vehicle can be held strictly liable for sensor misclassification under the Autonomous Vehicles Act.\n2. Whether the pedestrian's unusual costume constitutes an 'unforeseeable anomaly' exempting the manufacturer from liability.");
+    setRules("Laws of the State of California.\nThe Autonomous Vehicles Act of 2025.");
+  };
+
   const handleSave = () => {
     if (!name || !proposition || !issues) {
       alert("Please fill in the Moot Name, Proposition, and Issues.");
@@ -71,10 +78,19 @@ export default function MootSetup() {
           <Upload className="w-10 h-10 text-brass mx-auto mb-4" />
           <h3 className="text-xl font-serif-header text-mahogany font-bold mb-2">Auto-Fill from PDF</h3>
           <p className="text-sm text-ink/70 mb-4 max-w-md mx-auto">Drop your moot proposition or rules PDF here. The AI will read it and instantly fill out all the details below.</p>
-          <label className="bg-brass text-white px-6 py-2 rounded-sm cursor-pointer hover:bg-brass/90 transition-colors inline-block font-bold text-sm tracking-wider uppercase">
-            Upload PDF
-            <input type="file" accept=".pdf" className="hidden" onChange={handleFileUpload} />
-          </label>
+          <div className="flex gap-4 justify-center items-center mt-2">
+            <label className="bg-brass text-white px-6 py-2 rounded-sm cursor-pointer hover:bg-brass/90 transition-colors inline-block font-bold text-sm tracking-wider uppercase shadow-sm">
+              Upload PDF
+              <input type="file" accept=".pdf" className="hidden" onChange={handleFileUpload} />
+            </label>
+            <span className="text-ink/40 font-serif-header italic text-sm">or</span>
+            <button 
+              onClick={handleLoadDemo}
+              className="border-2 border-brass text-mahogany px-6 py-2 rounded-sm cursor-pointer hover:bg-brass/10 transition-colors inline-block font-bold text-sm tracking-wider uppercase shadow-sm"
+            >
+              Load Demo Case
+            </button>
+          </div>
         </div>
 
         <div className="text-center">
