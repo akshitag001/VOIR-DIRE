@@ -1,7 +1,4 @@
 <div align="center">
-  <!-- Placeholder for a logo or main app screenshot -->
-  <img src="images/logo.png" alt="App Logo" width="150" />
-
   # ⚖️ Amicus: The Ultimate Moot Court Simulator
   
   **Transforming how law students and practitioners prepare for appellate advocacy.**
@@ -40,11 +37,6 @@ Step up to the podium. Submit your oral arguments to the court.
 
 ### ⚔️ 4. Rebuttal Strategy Assistant
 Stuck on what the opposing counsel might say? The Rebuttal Assistant acts as your co-counsel. It predicts the three strongest arguments your opponent is likely to make, and arms you with suggested rebuttals and cross-questions.
-
-<!-- Placeholder for rebuttal screenshot -->
-<div align="center">
-  <img src="images/rebuttal.png" alt="Rebuttal Strategy Assistant" width="800" />
-</div>
 
 ---
 
