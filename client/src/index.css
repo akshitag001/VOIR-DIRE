@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mahogany: #3B2A1E;
+  --color-brass: #B8925A;
+  --color-oxblood: #6B1E23;
+  --color-parchment: #F3ECDD;
+  --color-ink: #1C1A16;
+  --color-witness-bg: #EAE1D0;
+
+  --font-serif-header: "Playfair Display", serif;
+  --font-serif-body: "Source Serif 4", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment text-ink font-serif-body m-0 p-0;
+    /* Subtle parchment texture can be added with a noise overlay later */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif-header;
+  }
+}
